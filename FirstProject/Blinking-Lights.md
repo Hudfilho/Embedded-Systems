@@ -29,10 +29,9 @@ Before you begin, ensure you have the following installed:
 
 ## 2- Usage
 
-Follow these steps to tinker your Arduino
-
 ### Configuration
 
+Follow these steps to build your circuit:
 
 
 ## 3- Base Code
