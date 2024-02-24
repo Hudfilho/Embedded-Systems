@@ -2,7 +2,7 @@
 
 ## Overview
 
-"ColorSense LEDs" is a project that changes LED colors based on target distance. Simple and interactive, it's perfect for beginners exploring the Ultrassonic Distance Sensor for Arduino.
+"ColorSense LEDs" is a project that changes LED colors based on target distance. Simple and interactive, it's perfect for beginners explore the Ultrassonic Distance Sensor for Arduino.
 
 ## Table of Contents
 
