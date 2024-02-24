@@ -1,31 +1,28 @@
-void SendSignal(bool mode);
+#include <HCSR04.h>
+
+UltraSonicDistanceSensor distanceSensor(4,5);
+void ligarLed(int forca);
 
 void setup() {
-  pinMode(13, OUTPUT);
+  // put your setup code here, to run once:
+  Serial.begin(9600);
 }
 
 void loop() {
-  /*
-  digitalWrite(13, HIGH);   
-  delay(2000);              
-  digitalWrite(13, LOW);   
-  delay(10);
-  */
-  SendSignal(false);
-  SendSignal(true);
-  SendSignal(false);
+  // put your main code here, to run repeatedly:
+  Serial.println(distanceSensor.measureDistanceCm());
 
-  delay(5000);
+  int dist = distanceSensor.measureDistanceCm();
+
+  if(dist > 50) ligarLed(11);
+  else if(dist > 10) ligarLed(12);
+  else ligarLed(13);
+
+  delay(500);
 }
 
-void SendSignal(bool mode){
-    for(int i=0; i<3; i++){
-      digitalWrite(13, HIGH);
-
-      if(mode) delay(1000);
-      else delay(500);
-      
-      digitalWrite(13, LOW);
-      delay(500);
-    }
+void ligarLed(int porta){
+  digitalWrite(porta, HIGH);
+  delay(200);
+  digitalWrite(porta, LOW);
 }
